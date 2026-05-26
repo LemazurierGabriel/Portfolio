@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Gabriel Lemazurier - étudiant MMI et designer/développeur web. Projets UI/UX, direction artistique, motion design et intégration front-end.">
-  <title>Portfolio MMI - Gabriel Lemazurier</title>
+  <meta name="description" content="Portfolio de Gabriel Lemazurier — designer & développeur front‑end (MMI). Projets UI/UX, direction artistique, motion design et intégration front‑end.">
+  <title>Gabriel Lemazurier — Designer & Développeur Front-end</title>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;700;900&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,15 +13,19 @@
   <div class="curseur" id="curseur"></div>
   <div class="curseur-anneau" id="curseurAnneau"></div>
 
-  <nav class="navigation">
-    <a href="#index.html" class="nav-logo">GL<span>.</span></a>
-    <ul class="nav-liens">
-      <li><a href="#a-propos">À propos</a></li>
-      <li><a href="#projets">Projets</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav class="navigation" aria-label="Navigation principale">
+      <a href="index.html" class="nav-logo">GL<span>.</span></a>
+      <ul class="nav-liens">
+        <li><a href="#a-propos">À propos</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
 
   <section class="en-tete">
 
@@ -135,7 +139,7 @@
 
     <div class="grille-projets a-reveler">
 
-      <a href="neonpulse.html" class="projet">
+      <a href="neonpulse.html" class="projet" aria-label="Voir le projet Neon Pulse">
         <div class="projet-image">
           <img src="images/apercu1site1.png" alt="Aperçu NEON PULSE">
           <div class="projet-hover-btn">Voir ↗</div>
@@ -150,7 +154,7 @@
         </div>
       </a>
 
-      <a href="projet2.html" target="_blank" class="projet">
+      <a href="projet2.html" target="_blank" class="projet" aria-label="Voir le projet Poképedia" rel="noopener noreferrer">
         <div class="projet-image">
           <img src="images/apercu1site2.png" alt="Aperçu projet 2">
           <div class="projet-hover-btn">Voir ↗</div>
@@ -165,7 +169,7 @@
         </div>
       </a>
 
-      <a href="projets/projet-3/index.html" target="_blank" class="projet">
+      <a href="projets/projet-3/index.html" target="_blank" class="projet" aria-label="Voir le projet Titre du projet 3" rel="noopener noreferrer">
         <div class="projet-image">
           <img src="images/apercu-projet-3.jpg" alt="Aperçu projet 3">
           <div class="projet-hover-btn">Voir ↗</div>
@@ -180,7 +184,7 @@
         </div>
       </a>
 
-      <a href="projets/projet-4/index.html" target="_blank" class="projet">
+      <a href="projets/projet-4/index.html" target="_blank" class="projet" aria-label="Voir le projet Titre du projet 4" rel="noopener noreferrer">
         <div class="projet-image">
           <img src="images/apercu-projet-4.jpg" alt="Aperçu projet 4">
           <div class="projet-hover-btn">Voir ↗</div>
@@ -195,7 +199,7 @@
         </div>
       </a>
 
-      <a href="projets/projet-5/index.html" target="_blank" class="projet">
+      <a href="projets/projet-5/index.html" target="_blank" class="projet" aria-label="Voir le projet Titre du projet 5" rel="noopener noreferrer">
         <div class="projet-image">
           <img src="images/apercu-projet-5.jpg" alt="Aperçu projet 5">
           <div class="projet-hover-btn">Voir ↗</div>
@@ -253,6 +257,8 @@
       <a href="mailto:lemazuriergabriel@gmail.com" target="_blank" class="lien-reseau">Gmail</a>
     </div>
   </section>
+
+  </main>
 
   <footer class="pied-de-page">
     <span>© 2025 Gabriel Lemazurier — MMI</span>
