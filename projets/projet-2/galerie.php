@@ -81,7 +81,7 @@
     <?php
     require ('footer.php');
     ?>
-    <script src="js/modal.js"></script>
-    <script src="js/gameboy-transition.js"></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/gameboy-transition.js" defer></script>
     </body>
 </html>

@@ -2,30 +2,17 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
     <link rel="stylesheet" type ="text/css" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/pokeball.png">
     <meta name="description" content="Découvrez Pokédia, l'encyclopédie Pokémon au style rétro Game Boy. Explorez notre Pokédex, accédez aux données détaillées et profitez d'une galerie d'artworks unique.">
     <title>Pokédia</title>
+    <!-- DataTables CSS : chargé de façon non-bloquante -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css"></noscript>
 </head>
 <body>
-
-    <script>
-        $(document).ready(function() {
-            $('#tableau-pokemons').DataTable({
-                responsive: true,
-                language: {
-                    url: 'https://cdn.datatables.net/plug-ins/1.13.7/i18n/fr-FR.json'
-                },
-            });
-        });
-    </script>
-        
-    <?php
+<?php
     // Appel du bloc Header et du Menu>
     require ('header.php');
     ?>
@@ -73,6 +60,20 @@
         // Appel du Pied de Page
         require ('footer.php');
         ?>
-    <script src="js/gameboy-transition.js"></script>
+    <!-- jQuery + DataTables : chargés en fin de body, non-bloquants -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" defer></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" defer></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js" defer></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (typeof $ !== "undefined") {
+          $("#tableau-pokemons").DataTable({
+            responsive: true,
+            language: { url: "https://cdn.datatables.net/plug-ins/1.13.7/i18n/fr-FR.json" }
+          });
+        }
+      });
+    </script>
+    <script src="js/gameboy-transition.js" defer></script>
 </body>
 </html>

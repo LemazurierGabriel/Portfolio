@@ -86,6 +86,6 @@
             // Appel du Pied de Page
             require ('footer.php');
             ?>
-        <script src="js/gameboy-transition.js"></script>
+        <script src="js/gameboy-transition.js" defer></script>
     </body>
 </html>
